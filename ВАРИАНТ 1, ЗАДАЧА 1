@@ -1,0 +1,51 @@
+#include <bits/stdc++.h>
+using namespace std;
+class BankAccount {
+private:
+ double balance;
+ string accountNumber;
+public:
+ BankAccount(string accNum, double initBalance){
+ if(accNum.empty()){
+     throw error("ошибка, номер счета не может быть пустым");
+ }
+ accountNumber = accNum;
+ balance = (initBalance > 0) ? initBalance : 0;
+ }
+ void deposit(double amount){
+     if(amount < 0){
+         cout << "error, не может быть отрицательным";
+         return;
+     }
+     balance += amount;\
+     cout << "успешно" << amount << endl;;
+     
+ }
+ bool withdraw(double amount){
+     if(amount <= 0){
+         cout << "error, сумма не можжет быть";
+         return false;
+     }
+     
+     if(amount > balance){
+         cout << "недостаточно средств " << amount << endl;
+         return false;
+     }
+     balance -= amount;
+     cout << "успешно снято " << amount;
+     return true;
+ }
+ double double get() const {
+     return balance;
+ }
+ string getAccount() const{
+     return accountNumber;
+ }
+ 
+};
+
+int main() { 
+
+
+return 0;
+}
