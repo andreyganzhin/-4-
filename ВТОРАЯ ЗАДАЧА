@@ -1,0 +1,49 @@
+#include <bits/stdc++.h>
+using namespace std;
+class Shape {
+public:
+    virtual double area() = 0;
+    virtual double perimeter() = 0;
+};
+class Circle : public Shape {
+    double r;
+public:
+    Circle(double radi) : r(radi){}
+     double area() over{
+        return r*r*3.14;
+ }
+};
+class Recatngle : public Shape{
+    double p, h;
+public:
+   Recatngle(double with, double hei) : p(with), h(hei){}
+   double area() over{
+       return p * h;
+   }
+    
+    
+};
+class Traingle : public Shape{
+    double a, b, c;
+public:
+    Traingle(double asked, double boal, double cik) : a(asked), b(voal), c(cik){}
+    double perimeter() over{
+        return a+b+c;
+    }
+    
+    Traingle(double asked, double boal, double cik) : a(asked), b(voal), c(cik){}
+    double area() over{
+        return sqrt(((a+b+c)/2)*(((a+b+c)/2)-a)*(((a+b+c)/2)-b)*((a+b+c)/2-c));
+    }
+};
+void(Shape* s1, Shape* s2){
+    if(Shape* s1 >  Shape* s2){
+        cout << " первая фигура больше " << endl;
+    }
+    else{
+        cout << "вторая фигура больше" << endl;
+    }
+}
+int main(){
+    
+}
