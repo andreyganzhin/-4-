@@ -1,0 +1,41 @@
+#include <bits/stdc++.h>
+using namespace std;
+struct Product {
+protected:
+   string name;
+   double price;
+   Product(string n, double p) : n(name), p(price){}
+   virtual void displayInfo() const{
+       cout << name << " - " << price << "руб" < endl;
+   }
+};
+struct Electronics : Product{
+    int powe;
+    Electronics(string n, double p, int w) : Product(n, p*0,9), powe(w){}
+    void displayInfo() over{
+        cout << name << power << price << endl;
+    }
+};
+struct Clothing : Product{
+    string size;
+    Clothing(string n, double p, string s) : Product(n, p * 0.8), size(s){};
+    void displayInfo() over{
+        cout << name << size << price << endl;
+    }
+    
+    
+};
+struct Food : Product{
+    double eating;
+    Food(string n, double p, int e) : Product(n, p*0.7), eating(e){}
+    void displayInfo() over{
+        cout << name << eating << price << endl;
+    }
+}
+int main{
+    std::vector<Product*> list;
+    list.push_back(new Electronics());
+    list.push_back(new Food());
+    list.push_back(new Clothing());
+    
+}
